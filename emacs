@@ -1,6 +1,9 @@
 (require 'color-theme)
 (add-to-list 'custom-theme-load-path "~/emacs")
 
+(setq inhibit-startup-message t)
+(setq inhibit-startup-echo-area-message t)
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
