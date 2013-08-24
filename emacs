@@ -61,3 +61,8 @@
 
 ;; when searching TAGS in code, make it case SENSITIVE
 (setq tags-case-fold-search nil)
+
+;; set default font
+(when window-system  
+    (set-face-attribute 'default nil :font "Monospace-10")
+)
