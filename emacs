@@ -1,8 +1,7 @@
+;; set all theme stuff ---------
+
 (require 'color-theme)
 (add-to-list 'custom-theme-load-path "~/emacs")
-
-(setq inhibit-startup-message t)
-(setq inhibit-startup-echo-area-message t)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -18,15 +17,24 @@
  )
 (load-theme 'mytheme24 t)
 
+;; end of theme stuff -------------
 
+;; disable initial spash and 2-window split
+(setq inhibit-startup-message t)
+(setq inhibit-startup-echo-area-message t)
+
+;; show pharentesys in code
 (show-paren-mode 1)
 
+;; when compiling scroll down
 (setq compilation-scroll-output 1)
 
+;; indentation and tabs for C code
 (setq c-basic-indent 2)
 (setq tab-width 2)
 (setq indent-tabs-mode nil)
 
+;; tabs hilight stuff  ------------
 (setq highlight-tabs 1)
 (setq highlight-trailing-whitespace 1)
 
@@ -49,3 +57,7 @@
       (setq i (1+ i)))
     (aset disptab 127 (vector ?^ ??))
     (setq buffer-display-table disptab)))
+;; end tabs hilight stuff  ------------
+
+;; when searching TAGS in code, make it case SENSITIVE
+(setq tags-case-fold-search nil)
