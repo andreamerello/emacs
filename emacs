@@ -38,6 +38,19 @@
 (setq highlight-tabs 1)
 (setq highlight-trailing-whitespace 1)
 
+(defun my-gdb-host ()
+  (interactive)
+  (setq gud-gdb-command-name "gdb -i=mi")
+  (message "gdb for host programs")
+)
+
+(defun my-gdb-openocd-arm ()
+  (interactive)
+  (setq gud-gdb-command-name "arm-none-eabi-gdb -i=mi -x openocd.gdb")
+  (message "gdb for ARM/openocd")
+)
+
+
 (defun my-show-tabs ()
   (interactive)
   (let ((i 0) (disptab make-display-table)))

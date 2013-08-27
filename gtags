@@ -1,0 +1,36 @@
+ Using gtags (global)
+As a follow up to the last post, I tried emacs+gtags and it is really powerful when compared to emacs+etags.
+
+Important things to get started.
+
+First run gtags on the code.
+$ gtags
+
+This would create four files GPATH, GRTAGS, GSYMS, GTAGS
+
+Open emacs and enable gtags
+M-x gtags-mode RET
+
+To enable auto completion of function names\symbols etc use,
+M-x gtags-make-complete-list
+NOTE: This is deprecated and not required now.
+
+To locate a function use,
+M-x gtags-find-tag function_name.
+You can also use M-.
+
+If more than one is found a stack is returned. Select one and hit RET. In order to get the stack use,
+M-x gtags-pop-stack.
+You can also use M-*
+
+To find a symbol use,
+M-x gtags-find-symbol m_myVar
+
+To find anything use,
+M-x gtags-find-with-grep "gtags rules"
+
+Once you modify the code, just update the code
+global -u -v
+
+To visit the tags folder use,
+M-x gtags-visit-rootdir and point it to the folder that has the TAGS!
