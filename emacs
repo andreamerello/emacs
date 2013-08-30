@@ -79,3 +79,7 @@
 (when window-system  
     (set-face-attribute 'default nil :font "Monospace-10")
 )
+
+; ---------------------- key bindings ---------------------
+(global-set-key [(meta down)] 'scroll-up-line)
+(global-set-key [(meta up)] 'scroll-down-line)
