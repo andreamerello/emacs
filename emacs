@@ -27,7 +27,7 @@
 (show-paren-mode 1)
 
 ;; when compiling scroll down
-(setq compilation-scroll-output 1)
+;(setq compilation-scroll-output 1)
 
 ;; indentation and tabs for C code
 (setq c-basic-indent 2)
@@ -37,6 +37,9 @@
 ;; tabs hilight stuff  ------------
 (setq highlight-tabs 1)
 (setq highlight-trailing-whitespace 1)
+
+;; default to gtag mode
+(gtags-mode)
 
 (defun my-gdb-host ()
   (interactive)
@@ -80,6 +83,8 @@
     (set-face-attribute 'default nil :font "Monospace-10")
 )
 
+
 ; ---------------------- key bindings ---------------------
 (global-set-key [(meta down)] 'scroll-up-line)
 (global-set-key [(meta up)] 'scroll-down-line)
+(global-set-key [(ctrl .)] 'gtags-find-rtag)
