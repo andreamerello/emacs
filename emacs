@@ -27,7 +27,7 @@
 (show-paren-mode 1)
 
 ;; --------- shows column number
-(show-column number 1)
+(column-number-mode 1)
 
 
 ; ----------- Show file full path in title bar -------
