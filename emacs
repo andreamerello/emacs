@@ -1,4 +1,4 @@
-;; set all theme stuff ---------
+;; ------ set all theme stuff ---------
 
 (require 'color-theme)
 (add-to-list 'custom-theme-load-path "~/emacs")
@@ -17,30 +17,52 @@
  )
 (load-theme 'mytheme24 t)
 
-;; end of theme stuff -------------
+;; -------- end of theme stuff -------------
 
-;; disable initial spash and 2-window split
+;; ---------- disable initial spash and 2-window split
 (setq inhibit-startup-message t)
 (setq inhibit-startup-echo-area-message t)
 
-;; show pharentesys in code
+;; --------- hilight pharentesys in code
 (show-paren-mode 1)
+
+;; --------- shows column number
+(show-column number 1)
+
+
+; ----------- Show file full path in title bar -------
+(setq-default frame-title-format
+   (list '((buffer-file-name " %f"
+             (dired-directory
+              dired-directory
+              (revert-buffer-function " %b"
+              ("%b - Dir:  " default-directory)))))))
 
 ;; when compiling scroll down
 ;(setq compilation-scroll-output 1)
 
-;; indentation and tabs for C code
-(setq c-basic-indent 2)
-(setq tab-width 2)
-(setq indent-tabs-mode nil)
+;; -------  indentation and tabs for C code
 
-;; tabs hilight stuff  ------------
+(setq c-default-style "linux")
+;(setq c-basic-indent 2)
+;(setq tab-width 2)
+;(setq indent-tabs-mode nil)
+
+;; ------ tabs hilight stuff  ------------
 (setq highlight-tabs 1)
 (setq highlight-trailing-whitespace 1)
 
-;; default to gtag mode
-(gtags-mode)
 
+;; ------- when searching TAGS in code, make it case SENSITIVE
+(setq tags-case-fold-search nil)
+
+;; ------ set default font
+(when window-system  
+    (set-face-attribute 'default nil :font "Monospace-10")
+)
+
+
+; -------------------- custom funcs --------------
 (defun my-gdb-host ()
   (interactive)
   (setq gud-gdb-command-name "gdb -i=mi")
@@ -75,13 +97,6 @@
     (setq buffer-display-table disptab)))
 ;; end tabs hilight stuff  ------------
 
-;; when searching TAGS in code, make it case SENSITIVE
-(setq tags-case-fold-search nil)
-
-;; set default font
-(when window-system  
-    (set-face-attribute 'default nil :font "Monospace-10")
-)
 
 
 ; ---------------------- key bindings ---------------------
