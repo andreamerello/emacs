@@ -1,5 +1,5 @@
 ;; ------ set all theme stuff ---------
-
+(require 'xcscope)
 (require 'color-theme)
 (add-to-list 'custom-theme-load-path "~/emacs")
 
