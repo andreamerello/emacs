@@ -152,9 +152,9 @@
 
 
 ;; ---------------------- hooks ---------------------------
-(add-hook 'after-save-hook 'my-gtags-update-hook)
+;;(add-hook 'after-save-hook 'my-gtags-update-hook)
 ;;(add-hook 'after-load-hook 'my-gtags-load-hook)
-(add-hook 'c-mode-common-hook 'my-gtags-mode)
+;;(add-hook 'c-mode-common-hook 'my-gtags-mode)
 
 
 
