@@ -76,6 +76,7 @@
 (setq c-basic-indent 2)
 (setq tab-width 2)
 (setq indent-tabs-mode nil)
+(setq indent-line-function 'insert-tab)
 )
 
 ; ------- GTAGS RELATED 
