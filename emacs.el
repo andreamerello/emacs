@@ -74,6 +74,7 @@
 (defun my-indent-2 ()
 (interactive)
 (setq c-basic-indent 2)
+(setq c-basic-offset 2)
 (setq tab-width 2)
 (setq indent-tabs-mode nil)
 (setq indent-line-function 'insert-tab)
