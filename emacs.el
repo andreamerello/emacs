@@ -66,6 +66,23 @@
 
 
 ; -------------------- custom funcs --------------
+
+(defun my-indent-linux ()
+(interactive)
+(setq c-default-style "linux")
+
+
+)
+
+(defun my-indent-2 ()
+(interactive)
+;;(setq c-basic-indent 2)
+(setq c-basic-offset 2)
+(setq tab-width 2)
+(setq indent-tabs-mode nil)
+;(setq indent-line-function 'insert-tab)
+)
+
 ; ------- GTAGS RELATED 
 
 (defun my-gtags-root-dir ()
