@@ -1,3 +1,6 @@
+; ------ disable vc-git
+(setq vc-handled-backends ())
+
 ;; ------ set all theme stuff ---------
 (require 'xcscope)
 (require 'color-theme)
@@ -110,7 +113,12 @@
       (gtags-mode 1)
       (setq gtags-rootdir (my-gtags-root-dir))))
       
-
+(defun my-git()
+  "Turn on git mode"
+  (interactive)
+  (require 'vc-git)
+  (add-to-list 'vc-handled-backends 'git))
+  ;(require 'git)
           
 
 ; --------- GDB/ openocd related
