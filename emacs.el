@@ -67,6 +67,13 @@
 ;(setq highlight-tabs 1)
 ;(setq highlight-trailing-whitespace 1)
 ;(setq trailing-whitespace 'my-warning-face)
+(defface hc-trailing-whitespace '((t (:inherit 'my-warning-face)))
+  "Face used for a column marker.  Usually a background color."
+  :group 'Highlight-Characters :group 'faces)
+
+(defface hc-tab '((t (:background "#505000")))
+  "*Face for highlighting tab characters (`C-i') in Font-Lock mode."
+  :group 'Highlight-Characters :group 'faces)
 
 
 ;; ------- current col hilight -----------
@@ -79,8 +86,9 @@
   "A default face for vertical line highlighting in visual lines."
   :group 'vline)
 
+;; don't touch background here
 (defface my-vline-visual-face
-  '((t (:background "#000000")))
+  '((t ()))
   "A default face for vertical line highlighting in visual lines."
   :group 'vline)
 
