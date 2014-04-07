@@ -62,17 +62,26 @@
 (setq highlight-tabs 1)
 (setq highlight-trailing-whitespace 1)
 
-;;(setq column-marker-1-face)
-;; ------- current col hilight
+
+;; ------- current col hilight -----------
 (setq vline-use-timer 1)
-(setq vline-idle-time 0.8)
-;;(setq vline-style 'compose)
+(setq vline-idle-time 0.4)
+
+;;(setq vline-style 'compose) ;; compose brokes vertial font size
 (defface my-vline-face
   '((t (:background "#151515")))
   "A default face for vertical line highlighting in visual lines."
   :group 'vline)
 
+(defface my-vline-visual-face
+  '((t (:background "#000000")))
+  "A default face for vertical line highlighting in visual lines."
+  :group 'vline)
+
 (setq vline-face 'my-vline-face)
+;; face for wrapped rows
+(setq vline-visual-face 'my-vline-visual-face)
+
 ;; ------- when searching TAGS in code, make it case SENSITIVE
 (setq tags-case-fold-search nil)
 
