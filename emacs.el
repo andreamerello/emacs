@@ -3,6 +3,7 @@
 
 ;; ------ plugins & extensions ---------
 (add-to-list 'load-path "~/emacs")
+<<<<<<< HEAD
 (require 'xcscope)
 ;; for col 80 mark
 (require 'column-marker)
@@ -11,9 +12,18 @@
 (require 'vline)
 (require 'highlight-chars)
 ;; ------ set all theme stuff ---------
+=======
+>>>>>>> origin/master
 (require 'xcscope)
-(require 'color-theme)
+;; for col 80 mark
+(require 'column-marker)
+;; for current col hilight
+;;(require 'col-highlight)
+(require 'vline)
+(require 'highlight-chars)
+;; ------ set all theme stuff ---------
 (add-to-list 'custom-theme-load-path "~/emacs")
+(require 'color-theme)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -40,7 +50,6 @@
 
 ;; --------- shows column number
 (column-number-mode 1)
-
 
 ; ----------- Show file full path in title bar -------
 (setq-default frame-title-format
@@ -80,6 +89,7 @@
   "*Face for highlighting tab characters (`C-i') in Font-Lock mode."
   :group 'Highlight-Characters :group 'faces)
 
+<<<<<<< HEAD
 
 ;; ------- current col hilight -----------
 (setq vline-use-timer t)
@@ -102,6 +112,30 @@
 ;; face for wrapped rows
 (setq vline-visual-face 'my-vline-visual-face)
 
+=======
+
+;; ------- current col hilight -----------
+(setq vline-use-timer t)
+(setq vline-idle-time 0.4)
+
+;;(setq vline-style 'compose) ;; compose brokes vertial font size
+(defface my-vline-face
+  '((t (:background "#151515")))
+  "A default face for vertical line highlighting in visual lines."
+  :group 'vline)
+
+;; don't touch background here
+(defface my-vline-visual-face
+  '((t ()))
+  "A default face for vertical line highlighting in visual lines."
+  :group 'vline)
+
+;; wrapped rows are draw differently
+(setq vline-face 'my-vline-face)
+;; face for wrapped rows
+(setq vline-visual-face 'my-vline-visual-face)
+
+>>>>>>> origin/master
 ;; ------ set face for 80 col highligh -------------------------
 (setq column-marker-1-face 'my-warning-face)
 
