@@ -1,10 +1,17 @@
 ; ------ disable vc-git
 (setq vc-handled-backends ())
 
-;; ------ set all theme stuff ---------
+;; ------ plugins & extensions ---------
+(add-to-list 'load-path "~/emacs")
 (require 'xcscope)
-(require 'color-theme)
+;; for col 80 mark
+(require 'column-marker)
+;; for current col hilight
+;;(require 'col-highlight)
+(require 'vline)
+;; ------ set all theme stuff ---------
 (add-to-list 'custom-theme-load-path "~/emacs")
+(require 'color-theme)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -55,7 +62,17 @@
 (setq highlight-tabs 1)
 (setq highlight-trailing-whitespace 1)
 
+;;(setq column-marker-1-face)
+;; ------- current col hilight
+(setq vline-use-timer 1)
+(setq vline-idle-time 0.8)
+;;(setq vline-style 'compose)
+(defface my-vline-face
+  '((t (:background "#151515")))
+  "A default face for vertical line highlighting in visual lines."
+  :group 'vline)
 
+(setq vline-face 'my-vline-face)
 ;; ------- when searching TAGS in code, make it case SENSITIVE
 (setq tags-case-fold-search nil)
 
@@ -181,6 +198,9 @@
 ;;(add-hook 'after-load-hook 'my-gtags-load-hook)
 ;;(add-hook 'c-mode-common-hook 'my-gtags-mode)
 
+;; --------- hilight column #80
+(add-hook 'prog-mode-hook (lambda() (interactive) (column-marker-1 80)))
+(add-hook 'prog-mode-hook 'vline-mode)
 
 
 
