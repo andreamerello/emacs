@@ -82,6 +82,13 @@
 ;; face for wrapped rows
 (setq vline-visual-face 'my-vline-visual-face)
 
+;; ------ set face for 80 col highligh -------------------------
+(defface my-column-marker-1-face '((t (:background "#700000")))
+  "Face used for a column marker.  Usually a background color."
+  :group 'faces)
+
+(setq column-marker-1-face 'my-column-marker-1-face)
+
 ;; ------- when searching TAGS in code, make it case SENSITIVE
 (setq tags-case-fold-search nil)
 
@@ -207,10 +214,9 @@
 ;;(add-hook 'after-load-hook 'my-gtags-load-hook)
 ;;(add-hook 'c-mode-common-hook 'my-gtags-mode)
 
-;; --------- hilight column #80
+;; --------- hilight column #80 -------------------------
 (add-hook 'prog-mode-hook (lambda() (interactive) (column-marker-1 80)))
 (add-hook 'prog-mode-hook 'vline-mode)
-
 
 
 ; ---------------------- key bindings ---------------------
