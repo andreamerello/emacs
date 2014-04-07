@@ -3,17 +3,6 @@
 
 ;; ------ plugins & extensions ---------
 (add-to-list 'load-path "~/emacs")
-<<<<<<< HEAD
-(require 'xcscope)
-;; for col 80 mark
-(require 'column-marker)
-;; for current col hilight
-;;(require 'col-highlight)
-(require 'vline)
-(require 'highlight-chars)
-;; ------ set all theme stuff ---------
-=======
->>>>>>> origin/master
 (require 'xcscope)
 ;; for col 80 mark
 (require 'column-marker)
@@ -89,7 +78,7 @@
   "*Face for highlighting tab characters (`C-i') in Font-Lock mode."
   :group 'Highlight-Characters :group 'faces)
 
-<<<<<<< HEAD
+
 
 ;; ------- current col hilight -----------
 (setq vline-use-timer t)
@@ -112,8 +101,6 @@
 ;; face for wrapped rows
 (setq vline-visual-face 'my-vline-visual-face)
 
-=======
-
 ;; ------- current col hilight -----------
 (setq vline-use-timer t)
 (setq vline-idle-time 0.4)
@@ -135,7 +122,6 @@
 ;; face for wrapped rows
 (setq vline-visual-face 'my-vline-visual-face)
 
->>>>>>> origin/master
 ;; ------ set face for 80 col highligh -------------------------
 (setq column-marker-1-face 'my-warning-face)
 
