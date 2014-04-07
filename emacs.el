@@ -9,6 +9,7 @@
 ;; for current col hilight
 ;;(require 'col-highlight)
 (require 'vline)
+(require 'highlight-chars)
 ;; ------ set all theme stuff ---------
 (add-to-list 'custom-theme-load-path "~/emacs")
 (require 'color-theme)
@@ -39,7 +40,6 @@
 ;; --------- shows column number
 (column-number-mode 1)
 
-
 ; ----------- Show file full path in title bar -------
 (setq-default frame-title-format
    (list '((buffer-file-name " %f"
@@ -58,13 +58,19 @@
 ;(setq tab-width 2)
 ;(setq indent-tabs-mode nil)
 
-;; ------ tabs hilight stuff  ------------
-(setq highlight-tabs 1)
-(setq highlight-trailing-whitespace 1)
+;; ------ face for all warnings (trailing whitespace, > 80 cols.. 
+(defface my-warning-face '((t (:background "#900000")))
+  "Face used for a column marker.  Usually a background color."
+  :group 'faces)
+
+;; ------ tabs & other special chars hilight stuff  ------------
+;(setq highlight-tabs 1)
+;(setq highlight-trailing-whitespace 1)
+;(setq trailing-whitespace 'my-warning-face)
 
 
 ;; ------- current col hilight -----------
-(setq vline-use-timer 1)
+(setq vline-use-timer t)
 (setq vline-idle-time 0.4)
 
 ;;(setq vline-style 'compose) ;; compose brokes vertial font size
@@ -78,22 +84,19 @@
   "A default face for vertical line highlighting in visual lines."
   :group 'vline)
 
+;; wrapped rows are draw differently
 (setq vline-face 'my-vline-face)
 ;; face for wrapped rows
 (setq vline-visual-face 'my-vline-visual-face)
 
 ;; ------ set face for 80 col highligh -------------------------
-(defface my-column-marker-1-face '((t (:background "#700000")))
-  "Face used for a column marker.  Usually a background color."
-  :group 'faces)
-
-(setq column-marker-1-face 'my-column-marker-1-face)
+(setq column-marker-1-face 'my-warning-face)
 
 ;; ------- when searching TAGS in code, make it case SENSITIVE
 (setq tags-case-fold-search nil)
 
 ;; ------ set default font
-(when window-system  
+(when window-system
     (set-face-attribute 'default nil :font "Monospace-10")
 )
 
@@ -185,26 +188,31 @@
   (message "gdb for ARM/openocd")
 )
 
+;(defun my-show-trailing-whitespace ()
+;(setq show-trailing-whitespace t))
 
 (defun my-show-tabs ()
   (interactive)
-  (let ((i 0) (disptab make-display-table)))
-    (while (&lt; i 32)
-      (or (= i ?\n)
-          (aset disptab i (vector ?^ (+ i 64))))
-      (setq i (1+ i)))
-    (aset disptab 127 (vector ?^ ??))
-    (setq buffer-display-table disptab)))
+ ; (standard-display-ascii ?\t "^I"))
+  (hc-toggle-highlight-tabs))
+;  (let ((i 0) (disptab make-display-table)))
+;    (while (&lt; i 32)
+;      (or (= i ?\n)
+;           (aset disptab i (vector ?^ (+ i 64))))
+;      (setq i (1+ i)))
+;    (aset disptab 127 (vector ?^ ??))
+;    (setq buffer-display-table disptab)))
 
-(defun my-hide-tabs ()
-  (interactive)
-  (let ((i 0) (disptab make-display-table)))
-    (while (&lt; i 32)
-      (or (= i ?\n) (= i ?\t)
-          (aset disptab i (vector ?^ (+ i 64))))
-      (setq i (1+ i)))
-    (aset disptab 127 (vector ?^ ??))
-    (setq buffer-display-table disptab)))
+;(defun my-hide-tabs ()
+;  (interactive)
+;  (hc-highlight-tabs nil))
+;  (let ((i 0) (disptab make-display-table)))
+;    (while (&lt; i 32)
+;      (or (= i ?\n) (= i ?\t)
+;          (aset disptab i (vector ?^ (+ i 64))))
+;      (setq i (1+ i)))
+;    (aset disptab 127 (vector ?^ ??))
+;    (setq buffer-display-table disptab)))
 ;; end tabs hilight stuff  ------------
 
 
@@ -216,8 +224,11 @@
 
 ;; --------- hilight column #80 -------------------------
 (add-hook 'prog-mode-hook (lambda() (interactive) (column-marker-1 80)))
+;; --------- enables current vertical colum highlight
 (add-hook 'prog-mode-hook 'vline-mode)
-
+;; --------- highlight trailing spaces
+;(add-hook 'prog-mode-hook 'my-show-trailing-whitespace)
+(add-hook 'prog-mode-hook 'hc-highlight-trailing-whitespace)
 
 ; ---------------------- key bindings ---------------------
 (global-set-key [(meta down)] 'scroll-up-line)
