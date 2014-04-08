@@ -1,6 +1,4 @@
 
-; ------- GTAGS RELATED 
-
 (defun my-gtags-root-dir ()
     "Returns GTAGS root directory or nil if doesn't exist."
     (interactive)
@@ -11,11 +9,11 @@
 
 (defun my-gtags-update ()
    "Make GTAGS incremental update"
-   (interactive)  
+   (interactive)
    (call-process "global" nil nil nil "-u"))
 
 
-(defun my-gtags-update-single(filename)	
+(defun my-gtags-update-single(filename)
       "Update Gtags database for changes in a single file"
       (interactive)
       (start-process "update-gtags" "update-gtags" "bash" "-c" (concat "cd " (gtags-root-dir) " ; gtags --single-update " filename )))
@@ -42,6 +40,6 @@
   (interactive)
   (when (my-gtags-root-dir)
       (message "Activating gtags-mode")
-      (setq default-directory (my-gtags-root-dir))       
+      (setq default-directory (my-gtags-root-dir))
       (gtags-mode 1)
       (setq gtags-rootdir (my-gtags-root-dir))))

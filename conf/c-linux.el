@@ -2,17 +2,12 @@
 ;; --------- hilight pharentesys in code
 (show-paren-mode 1)
 
-
 ;; when compiling scroll down
 ;(setq compilation-scroll-output 1)
-
-;; -------  indentation and tabs for C code
-
 
 ; default to kernel style
 (setq c-default-style "linux-tabs-only")
 (setq indent-tabs-mode t)
-
 
 
 (defun my-indent-linux ()
@@ -20,7 +15,6 @@
   (setq indent-tabs-mode t)
   (c-set-style "linux-tabs-only")
 )
-
 
 (defun my-indent-2 ()
   (interactive)
