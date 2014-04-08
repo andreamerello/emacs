@@ -8,7 +8,7 @@
 
 ;; --------- draws separator for line number
 (unless window-system
-  (setq linum-format "%4d\u2502 ")
+  (setq linum-format "%4d\u2502")
 )
 
 ; ----------- Show file full path in title bar -------

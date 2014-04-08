@@ -18,5 +18,6 @@
   '(font-lock-warning-face ((t (:foreground "red" :bold t))))
   '(isearch ((t (:foreground "#ffffff" :background "#8a1500" :bold t))))
   '(lazy-highlight ((t (:foreground "#dfdfdf" :background "#4a4441" :bold t ))))
+  '(linum ((t (:foreground "#404040"))))
 )
 (provide-theme 'mytheme24)
