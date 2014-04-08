@@ -3,10 +3,8 @@
 (setq inhibit-startup-echo-area-message t)
 (setq initial-scratch-message "")
 
-;; --------- draws separator for line number
-(unless window-system
-  (setq linum-format "%4d\u2502")
-)
+; ----------- no toolbar
+(tool-bar-mode -1)
 
 ; ----------- Show file full path in title bar -------
 (setq-default frame-title-format
