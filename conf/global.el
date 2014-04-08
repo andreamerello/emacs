@@ -20,3 +20,5 @@
 (when window-system
     (set-face-attribute 'default nil :font "Monospace-10")
 )
+
+(add-hook 'prog-mode-hook (lambda() (interactive) (global-linum-mode 1)))
