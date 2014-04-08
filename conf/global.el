@@ -21,3 +21,6 @@
 (when window-system
     (set-face-attribute 'default nil :font "Monospace-10")
 )
+
+;; ------ set default size
+(when window-system (set-frame-size (selected-frame) 95 53))
