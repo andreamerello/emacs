@@ -43,4 +43,3 @@
                         (arglist-cont-nonempty
                          c-lineup-gcc-asm-reg
                          c-lineup-arglist-tabs-only))))))
-

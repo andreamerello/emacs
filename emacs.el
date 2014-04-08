@@ -11,3 +11,4 @@
 (load-file "~/emacs/conf/vline.el")
 (load-file "~/emacs/conf/hilight.el")
 (load-file "~/emacs/conf/col80.el")
+(load-file "~/emacs/conf/del-trailing.el")
