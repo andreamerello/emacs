@@ -5,11 +5,6 @@
 ;; when compiling scroll down
 ;(setq compilation-scroll-output 1)
 
-; default to kernel style
-(setq c-default-style "linux-tabs-only")
-(setq indent-tabs-mode t)
-
-
 (defun my-indent-linux ()
   (interactive)
   (setq indent-tabs-mode t)
@@ -42,4 +37,8 @@
              '("linux" (c-offsets-alist
                         (arglist-cont-nonempty
                          c-lineup-gcc-asm-reg
-                         c-lineup-arglist-tabs-only))))))
+                         c-lineup-arglist-tabs-only)))
+ 	    ; default to kernel style
+	    (setq c-default-style "linux-tabs-only"))))
+; default to kernel style
+(setq indent-tabs-mode t)
