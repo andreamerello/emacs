@@ -1,0 +1,11 @@
+ I can't set a mark to select text in emacs. Ctrl+space insert a space character instead of setting the mark.
+
+
+Ok I found what was the problem for me. IBus daemon had been configured to use the same shortcut. It can be changed by:
+
+ibus-setup
+
+and then restarting the daemon using something like:
+
+killall ibus-daemon
+ibus-daemon -d
