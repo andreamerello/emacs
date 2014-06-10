@@ -6,7 +6,7 @@
 
 ;;(setq vline-style 'compose) ;; compose brokes vertial font size
 (defface my-vline-face
-  '((t (:background "#151515")))
+  '((t (:background "#191919")))
   "A default face for vertical line highlighting in visual lines."
   :group 'vline)
 
@@ -25,5 +25,8 @@
 (setq column-marker-1-face 'my-warning-face)
 
 
-
-(add-hook 'prog-mode-hook 'vline-mode)
+(defun my-vline-toggle ()
+  "Toggle vline mode"
+  (interactive)
+  (vline-mode))
+;(add-hook 'prog-mode-hook 'vline-mode)
