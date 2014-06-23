@@ -1,0 +1,14 @@
+customize-face -> shows face under cursor and make it possible to edit it live
+
+hexl-mode, normal-mode -> HEX editor and back
+ediff, ediff-merge -> diff mode
+
+indent-region -> indent the selected region
+fill-region, fill-paragraph -> justify to 80 cols
+auto-fill-mode -> auto justify to 80 cols while typing
+
+ediff:
+n,p -> next, prev diff
+a,b -> use the one in buf A or B
+v,V -> scroll up,dn all buffer
+| -> split window vert/horiz toggle
