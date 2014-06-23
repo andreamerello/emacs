@@ -24,6 +24,13 @@
   '(ediff-current-diff-A ((t (:foreground "#eaeaea" :background "#553333" ))))
   '(ediff-fine-diff-B ((t (:foreground "#eaeaea" :background "#119911" ))))
   '(ediff-current-diff-B ((t (:foreground "#eaeaea" :background "#335533" ))))
+  '(ediff-odd-diff-A ((t (:foreground "#e5e6e7" :background "#000087" ))))
+  '(ediff-odd-diff-B ((t (:foreground "#e5e6e7" :background "#000087" ))))
+  '(ediff-odd-diff-C ((t (:foreground "#e5e6e7" :background "#000087" ))))
+  '(ediff-even-diff-A ((t (:foreground "#e5e6e7" :background "#5f005f" ))))
+  '(ediff-even-diff-B ((t (:foreground "#e5e6e7" :background "#5f005f" ))))
+  '(ediff-even-diff-C ((t (:foreground "#e5e6e7" :background "#5f005f" ))))
+
   '(linum ((t (:foreground "#404040"))))
 )
 (provide-theme 'mytheme24)
