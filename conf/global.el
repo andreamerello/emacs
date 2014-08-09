@@ -24,3 +24,12 @@
 
 ;; ------ set default size
 (when window-system (set-frame-size (selected-frame) 95 53))
+
+; =====================================
+; popup the kill ring when pressing M-y
+; =====================================
+
+(require 'popup)
+(require 'pos-tip)
+(require 'popup-kill-ring)
+(global-set-key "\M-y" 'popup-kill-ring)
