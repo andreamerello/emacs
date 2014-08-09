@@ -13,3 +13,4 @@
 (load-file "~/emacs/conf/col80.el")
 (load-file "~/emacs/conf/del-trailing.el")
 (load-file "~/emacs/conf/linum.el")
+(load-file "~/emacs/conf/ido.el")
