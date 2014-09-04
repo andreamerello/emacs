@@ -14,3 +14,4 @@
 (load-file "~/emacs/conf/del-trailing.el")
 (load-file "~/emacs/conf/linum.el")
 (load-file "~/emacs/conf/ido.el")
+(load-file "~/emacs/conf/compile.el")
