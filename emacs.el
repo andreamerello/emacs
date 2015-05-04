@@ -15,3 +15,4 @@
 (load-file "~/emacs/conf/linum.el")
 (load-file "~/emacs/conf/ido.el")
 (load-file "~/emacs/conf/compile.el")
+(load-file "~/emacs/conf/dts-mode.el")
