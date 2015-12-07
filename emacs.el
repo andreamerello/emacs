@@ -6,7 +6,7 @@
 (load-file "~/emacs/conf/c-linux.el")
 (load-file "~/emacs/conf/key.el")
 (load-file "~/emacs/conf/gdb.el")
-(load-file "~/emacs/conf/gtags.el")
+;(load-file "~/emacs/conf/gtags.el")
 (load-file "~/emacs/conf/cscope.el")
 (load-file "~/emacs/conf/vline.el")
 (load-file "~/emacs/conf/hilight.el")
