@@ -1,4 +1,4 @@
-(add-to-list 'load-path "~/emacs")
+(add-to-list 'load-path "~/emacs/modules")
 
 (load-file "~/emacs/conf/git.el")
 (load-file "~/emacs/conf/theme.el")
@@ -15,5 +15,5 @@
 (load-file "~/emacs/conf/linum.el")
 (load-file "~/emacs/conf/ido.el")
 (load-file "~/emacs/conf/compile.el")
-(load-file "~/emacs/conf/dts-mode.el")
-(load-file "~/emacs/conf/php-mode.el")
+(load-file "~/emacs/modules/dts-mode.el")
+(load-file "~/emacs/modules/php-mode.el")
