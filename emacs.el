@@ -16,5 +16,6 @@
 (load-file "~/emacs/conf/ido.el")
 (load-file "~/emacs/conf/compile.el")
 (load-file "~/emacs/conf/lua.el")
+(load-file "~/emacs/modules/rust-mode.el")
 (load-file "~/emacs/modules/dts-mode.el")
 (load-file "~/emacs/modules/php-mode.el")
