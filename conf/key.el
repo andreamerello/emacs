@@ -7,6 +7,8 @@
 (global-set-key [(control meta right)] 'enlarge-window-horizontally)
 (global-set-key [(control meta left)] 'shrink-window-horizontally)
 
+(global-set-key (kbd "C-o") 'other-window)
+
 (global-set-key (kbd "M-n") 'my-next-error)
 (global-set-key (kbd "M-p") 'my-previous-error)
 (global-set-key (kbd "C-c k") 'my-kill-compiler-output)
