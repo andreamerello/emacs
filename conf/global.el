@@ -19,11 +19,11 @@
 
 ;; ------ set default font
 (when window-system
-    (set-face-attribute 'default nil :font "Monospace-10")
+    (set-face-attribute 'default nil :font "Liberation Mono-10")
 )
 
 ;; ------ set default size
-(when window-system (set-frame-size (selected-frame) 95 53))
+(when window-system (set-frame-size (selected-frame) 95 33))
 
 ; =====================================
 ; popup the kill ring when pressing M-y
