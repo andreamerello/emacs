@@ -5,6 +5,10 @@
 (setq inhibit-startup-echo-area-message t)
 (setq initial-scratch-message "")
 
+; --- don't check if files in recent list still exists.
+; --- it caused slowdowns on open with tramp stuff
+(setq recentf-keep '(file-remote-p file-readable-p))
+
 ; ----------- no toolbar
 (tool-bar-mode -1)
 
