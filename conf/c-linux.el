@@ -37,8 +37,10 @@
              '("linux" (c-offsets-alist
                         (arglist-cont-nonempty
                          c-lineup-gcc-asm-reg
-                         c-lineup-arglist-tabs-only)))
+                         c-lineup-arglist-tabs-only
+			 (arglist-close . c-lineup-close-paren))))
  	    ; default to kernel style
-	    (setq c-default-style "linux-tabs-only"))))
+	     (setq c-default-style "linux-tabs-only"))))
+
 ; default to kernel style
 (setq indent-tabs-mode t)
