@@ -1,5 +1,15 @@
 ;; -- license: GNU GPL
 
+
+(when (>= emacs-major-version 24)
+  (require 'package)
+  (add-to-list
+   'package-archives
+   '("melpa" . "http://melpa.org/packages/")
+   t)
+  (package-initialize))
+
+
 ;; ---------- disable initial spash and 2-window split
 (setq inhibit-startup-message t)
 (setq inhibit-startup-echo-area-message t)
