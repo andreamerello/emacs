@@ -34,9 +34,10 @@
 (setq tags-case-fold-search nil)
 
 ;; ------ set default font
-(when window-system
-    (set-face-attribute 'default nil :font "Monospace-10")
-)
+;;(when window-system
+  ;;(set-face-attribute 'default nil :font "Monospace-10")
+  (add-to-list 'default-frame-alist '(font . "Monospace-10" ))
+;;)
 
 ;;
 ;; -- windows size stuff
