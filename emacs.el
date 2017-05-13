@@ -20,3 +20,6 @@
 (load-file "~/emacs/modules/dts-mode.el")
 (load-file "~/emacs/conf/verilog.el")
 (load-file "~/emacs/modules/php-mode.el")
+(load-file "~/emacs/modules/bgscript.el")
+(load-file "~/emacs/modules/rename.el")
+(load-file "~/emacs/modules/strace.el")

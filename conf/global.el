@@ -1,5 +1,15 @@
 ;; -- license: GNU GPL
 
+
+(when (>= emacs-major-version 24)
+  (require 'package)
+  (add-to-list
+   'package-archives
+   '("melpa" . "http://melpa.org/packages/")
+   t)
+  (package-initialize))
+
+
 ;; ---------- disable initial spash and 2-window split
 (setq inhibit-startup-message t)
 (setq inhibit-startup-echo-area-message t)
@@ -24,9 +34,11 @@
 (setq tags-case-fold-search nil)
 
 ;; ------ set default font
-(when window-system
-    (set-face-attribute 'default nil :font "Liberation Mono-10")
-)
+;;(when window-system
+  ;;(set-face-attribute 'default nil :font "Monospace-10")
+  (add-to-list 'default-frame-alist '(font . "Monospace-10" ))
+;;)
+
 
 ;;
 ;; -- windows size stuff
