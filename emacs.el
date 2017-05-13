@@ -23,3 +23,5 @@
 (load-file "~/emacs/modules/bgscript.el")
 (load-file "~/emacs/modules/rename.el")
 (load-file "~/emacs/modules/strace.el")
+(load-file "~/emacs/modules/markdown-mode.el")
+(load-file "~/emacs/conf/markdown-mode.el")
