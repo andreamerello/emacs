@@ -10,6 +10,10 @@
 ;;
 ;; http://stackoverflow.com/questions/683425/globally-override-key-binding-in-emacs
 
+(global-set-key [(control x) (p)]
+		(function (lambda () (interactive)
+			    (insert "import pdb;pdb.set_trace()"))))
+
 (defvar my-keys-minor-mode-map
   (let ((map (make-sparse-keymap)))
     (define-key map [(meta down)] 'scroll-up-line)
@@ -25,6 +29,7 @@
     (define-key map (kbd "M-n") 'my-next-error)
     (define-key map (kbd "M-p") 'my-previous-error)
     (define-key map (kbd "C-c k") 'my-kill-compiler-output)
+
 ;; TODO find a good key
 ;;(define-key map [f8] 'gtags-show-callers)
     map)
