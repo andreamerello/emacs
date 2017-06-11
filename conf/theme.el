@@ -16,4 +16,16 @@
  )
 (load-theme 'mytheme24 t)
 
+(defun my-theme-sunlight ()
+  (interactive)
+  (load-theme 'mytheme24-light t)
+  (message "set sunlight theme")
+)
+
+(defun my-theme-normal ()
+  (interactive)
+  (load-theme 'mytheme24 t)
+  (message "set normal theme")
+)
+
 ;; -------- end of theme stuff -------------
