@@ -1,6 +1,6 @@
 (require 'ido)
 (ido-mode t)
-(setq ido-enable-prefix t)
+(setq ido-enable-prefix nil)
 (setq ido-enable-flex-matching t) ;; enable fuzzy matching
 
 
