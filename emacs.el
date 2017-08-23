@@ -25,3 +25,5 @@
 (load-file "~/emacs/modules/strace.el")
 (load-file "~/emacs/modules/markdown-mode.el")
 (load-file "~/emacs/conf/markdown-mode.el")
+(load-file "~/emacs/modules/transpose-frame.el")
+(require 'transpose-frame)
