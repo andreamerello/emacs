@@ -27,4 +27,6 @@
 (load-file "~/emacs/modules/markdown-mode.el")
 (load-file "~/emacs/conf/markdown-mode.el")
 (load-file "~/emacs/modules/transpose-frame.el")
+(load-file "~/emacs/modules/meson.el")
+
 (require 'transpose-frame)
