@@ -35,3 +35,10 @@
   '(linum ((t (:foreground "#404040"))))
 )
 (provide-theme 'mytheme24)
+
+(if (daemonp)
+    (add-hook 'after-make-frame-functions
+              (lambda (frame)
+                (with-selected-frame frame
+                  (load-theme 'mytheme24 t))))
+)
