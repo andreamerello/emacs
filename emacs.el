@@ -36,5 +36,4 @@
 (load-file "~/emacs/modules/transpose-frame.el")
 (load-file "~/emacs/modules/meson.el")
 (load-file "~/emacs/modules/kivy-mode.el")
-(load-file "~/emacs/conf/clipboard.el")
 (require 'transpose-frame)
