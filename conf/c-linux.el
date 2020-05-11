@@ -20,6 +20,15 @@
 					;(setq indent-line-function 'insert-tab)
 )
 
+(defun my-indent-4 ()
+  (interactive)
+  ;;(setq c-basic-indent 2)
+  (setq c-basic-offset 4)
+  (setq tab-width 4)
+  (setq indent-tabs-mode nil)
+					;(setq indent-line-function 'insert-tab)
+)
+
 (defun c-lineup-arglist-tabs-only (ignored)
   "Line up argument lists by tabs, not spaces"
   (let* ((anchor (c-langelem-pos c-syntactic-element))
