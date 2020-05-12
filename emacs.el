@@ -36,4 +36,5 @@
 (load-file "~/emacs/modules/transpose-frame.el")
 (load-file "~/emacs/modules/meson.el")
 (load-file "~/emacs/modules/kivy-mode.el")
+(load-file "~/emacs/modules/arduino-mode.el")
 (require 'transpose-frame)
