@@ -37,4 +37,5 @@
 (load-file "~/emacs/modules/meson.el")
 (load-file "~/emacs/modules/kivy-mode.el")
 (load-file "~/emacs/modules/arduino-mode.el")
+(load-file "~/emacs/conf/tramp.el")
 (require 'transpose-frame)
