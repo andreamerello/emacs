@@ -31,7 +31,7 @@
   '(ediff-even-diff-A ((t (:foreground "#e5e6e7" :background "#5f005f" ))))
   '(ediff-even-diff-B ((t (:foreground "#e5e6e7" :background "#5f005f" ))))
   '(ediff-even-diff-C ((t (:foreground "#e5e6e7" :background "#5f005f" ))))
-
+  '(which-func ((t (:foreground "#99ff99"))))
   '(linum ((t (:foreground "#404040"))))
 )
 (provide-theme 'mytheme24)
