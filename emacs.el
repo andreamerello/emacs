@@ -39,4 +39,5 @@
 (load-file "~/emacs/modules/arduino-mode.el")
 (load-file "~/emacs/conf/tramp.el")
 (load-file "~/emacs/conf/funcname.el")
+(load-file "~/emacs/modules/tablegen-mode.el")
 (require 'transpose-frame)
