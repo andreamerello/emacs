@@ -31,7 +31,15 @@
   '(ediff-even-diff-A ((t (:foreground "#e5e6e7" :background "#5f005f" ))))
   '(ediff-even-diff-B ((t (:foreground "#e5e6e7" :background "#5f005f" ))))
   '(ediff-even-diff-C ((t (:foreground "#e5e6e7" :background "#5f005f" ))))
-
+  '(which-func ((t (:foreground "#f7ff57"))))
+  '(header-line ((t (:background "#0e3d02"))))
   '(linum ((t (:foreground "#404040"))))
 )
 (provide-theme 'mytheme24)
+
+(if (daemonp)
+    (add-hook 'after-make-frame-functions
+              (lambda (frame)
+                (with-selected-frame frame
+                  (load-theme 'mytheme24 t))))
+)
