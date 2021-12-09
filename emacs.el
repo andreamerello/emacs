@@ -28,5 +28,6 @@
 (load-file "~/emacs/conf/markdown-mode.el")
 (load-file "~/emacs/modules/transpose-frame.el")
 (load-file "~/emacs/modules/meson.el")
+(load-file "~/emacs/modules/flymd-master/flymd.el")
 
 (require 'transpose-frame)
