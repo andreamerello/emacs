@@ -1,6 +1,8 @@
 ;; ------ set all theme stuff ---------
 (add-to-list 'custom-theme-load-path "~/emacs")
-(require 'color-theme)
+(add-to-list 'custom-theme-load-path 
+(file-name-as-directory "/usr/share/emacs/site-lisp/elpa/color-theme-modern-0.0.2"))
+;;(require 'color-theme)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
