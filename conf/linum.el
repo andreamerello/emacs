@@ -4,7 +4,8 @@
 (column-number-mode 1)
 
 ; ---------- show line number left to text
-(add-hook 'prog-mode-hook (lambda() (interactive) (global-linum-mode 1)))
+					;(add-hook 'prog-mode-hook (lambda() (interactive) (global-linum-mode 1)))
+(add-hook 'prog-mode-hook 'display-line-numbers-mode)
 
 ;; --------- draws separator for line number
 (unless window-system
